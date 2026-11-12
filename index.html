@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SV Tours & Travels | Pune</title>
+<meta name="description" content="SV Tours & Travels Pune - Local taxi, outstation trips, airport pickup and drop, car rental and tour packages.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:#f7f8fa;
+color:#202b3c;
+}
+header{
+background:#102b46;
+color:white;
+padding:18px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:23px;
+font-weight:bold;
+}
+.logo span{color:#f5b942}
+header a{
+color:white;
+text-decoration:none;
+}
+.hero{
+min-height:360px;
+background:linear-gradient(#071b2bbb,#071b2b88),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:90px 20px;
+}
+.hero h1{
+font-size:36px;
+margin-bottom:15px;
+}
+.hero p{
+font-size:17px;
+line-height:1.6;
+}
+.btn{
+display:inline-block;
+padding:13px 22px;
+background:#f5b942;
+color:#102b46;
+text-decoration:none;
+border-radius:7px;
+font-weight:bold;
+margin:18px 5px;
+border:none;
+cursor:pointer;
+}
+.container{
+max-width:1100px;
+margin:auto;
+padding:35px 18px;
+}
+.heading{
+text-align:center;
+margin-bottom:25px;
+}
+.heading h2{
+font-size:27px;
+color:#102b46;
+margin-bottom:8px;
+}
+.services,.cars,.packages{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+.service,.car,.package{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 3px 15px #00000012;
+}
+.service{
+padding:22px 10px;
+text-align:center;
+}
+.service .icon{font-size:32px}
+.service h3{margin-top:10px}
+.car img,.package img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+.car-info,.package-info{padding:15px}
+.car h3,.package h3{
+color:#102b46;
+margin-bottom:8px;
+}
+.car p,.package p{
+font-size:14px;
+line-height:1.6;
+color:#626b76;
+}
+.rate{
+color:#087b64;
+font-weight:bold;
+margin-top:10px;
+}
+.booking{
+background:white;
+padding:22px;
+border-radius:13px;
+box-shadow:0 3px 15px #00000012;
+}
+.booking h2{
+margin-bottom:18px;
+color:#102b46;
+}
+form label{
+display:block;
+font-size:14px;
+font-weight:bold;
+margin-top:12px;
+}
+form input,form select,form textarea{
+width:100%;
+padding:13px;
+margin-top:7px;
+border:1px solid #d9dfe6;
+border-radius:7px;
+font-size:15px;
+background:white;
+}
+form button{
+width:100%;
+background:#16845e;
+color:white;
+padding:15px;
+border:0;
+border-radius:7px;
+font-size:16px;
+font-weight:bold;
+margin-top:20px;
+}
+.contact{
+background:#102b46;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+.contact h2{margin-bottom:12px}
+.contact a{
+color:white;
+text-decoration:none;
+display:inline-block;
+margin:10px;
+font-weight:bold;
+}
+footer{
+background:#091c2e;
+color:#ddd;
+text-align:center;
+padding:20px;
+font-size:13px;
+}
+@media(min-width:650px){
+.services{grid-template-columns:repeat(4,1fr)}
+.cars,.packages{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SV <span>TOURS & TRAVELS</span></div>
+<a href="#booking">Book Now</a>
+</header>
+<section class="hero">
+<h1>Your Journey, Our Responsibility</h1>
+<p>Comfortable Rides | Safe Travel | Affordable Prices</p>
+<p>Local • Outstation • Airport • Tour Packages</p>
+<a class="btn" href="#booking">Book Your Ride</a>
+<a class="btn" href="tel:9860740890">Call Now</a>
+</section>
+<main>
+<section class="container">
+<div class="heading">
+<h2>Our Travel Services</h2>
+<p>Travel anywhere with comfort and convenience.</p>
+</div>
+<div class="services">
+<div class="service"><div class="icon">🚕</div><h3>Local Travel</h3></div>
+<div class="service"><div class="icon">🛣️</div><h3>Outstation Trips</h3></div>
+<div class="service"><div class="icon">✈️</div><h3>Airport Pickup & Drop</h3></div>
+<div class="service"><div class="icon">🏞️</div><h3>Tour Packages</h3></div>
+</div>
+</section>
+<section class="container">
+<div class="heading">
+<h2>Choose Your Vehicle</h2>
+<p>Comfortable vehicles for every journey.</p>
+</div>
+<div class="cars">
+<div class="car">
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700" alt="Sedan car">
+<div class="car-info">
+<h3>Sedan</h3>
+<p>Comfortable travel for small families and business trips.</p>
+<p class="rate">Rate: Contact for price</p>
+</div>
+</div>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=700" alt="SUV car">
+<div class="car-info">
+<h3>SUV</h3>
+<p>Spacious and comfortable for family and group travel.</p>
+<p class="rate">Rate: Contact for price</p>
+</div>
+</div>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=700" alt="Premium car">
+<div class="car-info">
+<h3>Premium Cars</h3>
+<p>Premium travel experience for special occasions.</p>
+<p class="rate">Rate: Contact for price</p>
+</div>
+</div>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=700" alt="Innova style vehicle">
+<div class="car-info">
+<h3>Innova Crysta</h3>
+<p>Ideal for family trips and outstation journeys.</p>
+<p class="rate">Rate: Contact for price</p>
+</div>
+</div>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700" alt="SUV vehicle">
+<div class="car-info">
+<h3>Hyundai Creta</h3>
+<p>Comfortable SUV for city and highway travel.</p>
+<p class="rate">Rate: Contact for price</p>
+</div>
+</div>
+<div class="car">
+<img src="https://images.unsplash.com/photo-1583267746897-2cf415887172?w=700" alt="Travel vehicle">
+<div class="car-info">
+<h3>Bus</h3>
+<p>Group travel, family functions and tours.</p>
+<p class="rate">Rate: Contact for price</p>
+</div>
+</div>
+</div>
+</section>
+<section class="container">
+<div class="heading">
+<h2>Popular Tour Packages</h2>
+<p>Explore beautiful destinations with SV Tours & Travels.</p>
+</div>
+<div class="packages">
+<div class="package">
+<img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=700" alt="Mahabaleshwar">
+<div class="package-info">
+<h3>Mahabaleshwar</h3>
+<p>Enjoy a refreshing hill station trip.</p>
+</div>
+</div>
+<div class="package">
+<img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?w=700" alt="Goa">
+<div class="package-info">
+<h3>Goa</h3>
+<p>Enjoy beaches and memorable holidays.</p>
+</div>
+</div>
+<div class="package">
+<img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=700" alt="Hill station">
+<div class="package-info">
+<h3>Lonavala</h3>
+<p>Enjoy a beautiful weekend getaway.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="container" id="booking">
+<div class="booking">
+<h2>Book Your Journey</h2>
+<form onsubmit="sendBooking(event)">
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+<label>Mobile Number</label>
+<input type="tel" id="phone" placeholder="10 digit mobile number" pattern="[0-9]{10}" required>
+<label>Travel Service</label>
+<select id="type" required>
+<option value="">Select Service</option>
+<option>Local Travel</option>
+<option>Outstation One Way</option>
+<option>Outstation Round Trip</option>
+<option>Airport Pickup</option>
+<option>Airport Drop</option>
+<option>Tour Package</option>
+</select>
+<label>Select Vehicle</label>
+<select id="vehicle" required>
+<option value="">Choose Vehicle</option>
+<option>Sedan</option>
+<option>Maruti Suzuki Dzire</option>
+<option>Hyundai Creta</option>
+<option>Innova Crysta</option>
+<option>SUV</option>
+<option>Bus</option>
+<option>Other</option>
+</select>
+<label>Pickup Location</label>
+<input type="text" id="pickup" placeholder="Enter pickup location" required>
+<label>Drop Location</label>
+<input type="text" id="drop" placeholder="Enter drop location" required>
+<label>Pickup Date</label>
+<input type="date" id="pickupDate" required>
+<label>Pickup Time</label>
+<input type="time" id="pickupTime" required>
+<label>Drop Date</label>
+<input type="date" id="dropDate" required>
+<label>Number of Passengers</label>
+<input type="number" id="passengers" min="1" placeholder="Number of passengers" required>
+<label>Additional Requirements</label>
+<textarea id="message" rows="3" placeholder="Any additional information"></textarea>
+<button type="submit">Send Booking Enquiry on WhatsApp</button>
+</form>
+</div>
+</section>
+</main>
+<section class="contact">
+<h2>Contact SV Tours & Travels</h2>
+<p>We are ready to make your journey comfortable.</p>
+<a href="tel:9860740890">📞 9860740890</a>
+<a href="tel:9881372700">📞 9881372700</a>
+<br>
+<a href="https://wa.me/919860740890">WhatsApp Us</a>
+</section>
+<footer>
+© 2026 SV Tours & Travels | All Rights Reserved
+</footer>
+<script>
+function sendBooking(event){
+event.preventDefault();
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let type=document.getElementById("type").value;
+let vehicle=document.getElementById("vehicle").value;
+let pickup=document.getElementById("pickup").value;
+let drop=document.getElementById("drop").value;
+let pickupDate=document.getElementById("pickupDate").value;
+let pickupTime=document.getElementById("pickupTime").value;
+let dropDate=document.getElementById("dropDate").value;
+let passengers=document.getElementById("passengers").value;
+let message=document.getElementById("message").value;
+let text=`NEW BOOKING ENQUIRY - SV TOURS & TRAVELS
+Name: ${name}
+Mobile: ${phone}
+Service: ${type}
+Vehicle: ${vehicle}
+Pickup Location: ${pickup}
+Drop Location: ${drop}
+Pickup Date: ${pickupDate}
+Pickup Time: ${pickupTime}
+Drop Date: ${dropDate}
+Passengers: ${passengers}
+Additional Requirements: ${message}`;
+let url="https://wa.me/919860740890?text="+encodeURIComponent(text);
+window.location.href=url;
+}
+</script>
+</body>
+</html>
