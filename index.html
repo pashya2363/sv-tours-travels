@@ -541,19 +541,13 @@ footer {
 </section>
 
 <!-- BOOKING FORM -->
-
 <section id="booking">
   <h2 class="section-title">Book Your Ride</h2>
   <p class="subtitle">Fill in your travel details. We will contact you.</p>
-
   <div class="booking">
-
     <form onsubmit="submitBooking(event)">
-
       <input type="text" id="name" placeholder="Your Full Name" required>
-
       <input type="tel" id="phone" placeholder="Mobile Number" required>
-
       <select id="service" required>
         <option value="">Select Service</option>
         <option>Local Travel</option>
@@ -562,7 +556,6 @@ footer {
         <option>Airport Drop</option>
         <option>Tour Package</option>
       </select>
-
       <select id="vehicle" required>
         <option value="">Select Vehicle</option>
         <option>Sedan - Glanza / Dzire / Aura</option>
@@ -571,27 +564,50 @@ footer {
         <option>Tempo Traveller</option>
         <option>Force Urbania</option>
       </select>
-
       <input type="text" id="pickup" placeholder="Pickup Location" required>
-
       <input type="text" id="drop" placeholder="Drop Location" required>
-
+      <label>Pickup Date</label>
       <input type="date" id="pickupDate" required>
-
+      <label>Pickup Time</label>
       <input type="time" id="pickupTime" required>
-
+      <label>Drop Date (Optional)</label>
       <input type="date" id="dropDate">
-
       <input type="number" id="passengers" placeholder="Number of Passengers" min="1" required>
-
       <textarea id="message" placeholder="Additional Requirements"></textarea>
-
       <button type="submit">Send Booking Enquiry on WhatsApp</button>
-
     </form>
   </div>
 </section>
-
+<script>
+function submitBooking(event) {
+  event.preventDefault();
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const vehicle = document.getElementById("vehicle").value;
+  const pickup = document.getElementById("pickup").value;
+  const drop = document.getElementById("drop").value;
+  const pickupDate = document.getElementById("pickupDate").value;
+  const pickupTime = document.getElementById("pickupTime").value;
+  const dropDate = document.getElementById("dropDate").value;
+  const passengers = document.getElementById("passengers").value;
+  const message = document.getElementById("message").value;
+  const bookingMessage = `NEW SV TOURS & TRAVELS BOOKING
+Name: ${name}
+Customer Mobile: ${phone}
+Service: ${service}
+Vehicle: ${vehicle}
+Pickup Location: ${pickup}
+Drop Location: ${drop}
+Pickup Date: ${pickupDate}
+Pickup Time: ${pickupTime}
+Drop Date: ${dropDate || "Not specified"}
+Passengers: ${passengers}
+Additional Requirements: ${message || "None"}`;
+  const url = "https://wa.me/919860740890?text=" + encodeURIComponent(bookingMessage);
+  window.open(url, "_blank");
+}
+</script>
 <!-- CONTACT -->
 
 <section id="contact" class="contact">
