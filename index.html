@@ -681,6 +681,16 @@ Additional Requirements: ${message}`;
 
   window.open(url, "_blank");
 }
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://zbyejnltooxelenendmz.supabase.co";
+const SUPABASE_KEY = "sb_publishable_8oxS-7QgHoRBvLs5_6Zh5g_KBTLuB__";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+</script>
 </script>
 
 </section>
