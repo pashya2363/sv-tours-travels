@@ -614,7 +614,30 @@ footer {
      WhatsApp Us
   </a>
 </section>
+<section id="reviews" class="reviews-section">
+  <h2>Customer Reviews</h2>
+  <p>Share your travel experience with SV Tours & Travels.</p>
 
+  <form id="reviewForm">
+    <input type="text" id="reviewName" placeholder="Your Name" required>
+
+    <label for="reviewRating">Your Rating</label>
+    <select id="reviewRating" required>
+      <option value="5">★★★★★ - Excellent</option>
+      <option value="4">★★★★ - Very Good</option>
+      <option value="3">★★★ - Good</option>
+      <option value="2">★★ - Average</option>
+      <option value="1">★ - Poor</option>
+    </select>
+
+    <textarea id="reviewMessage" placeholder="Write your experience..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+    <p id="reviewNotice">Your review will be published after admin approval.</p>
+  </form>
+
+  <div id="approvedReviews"></div>
+</section>
 <footer>
   <h3>SV TOURS & TRAVELS</h3>
   <p>Your Journey, Our Responsibility.</p>
@@ -659,29 +682,7 @@ Additional Requirements: ${message}`;
   window.open(url, "_blank");
 }
 </script>
-<section id="reviews" class="reviews-section">
-  <h2>Customer Reviews</h2>
-  <p>Share your travel experience with SV Tours & Travels.</p>
 
-  <form id="reviewForm">
-    <input type="text" id="reviewName" placeholder="Your Name" required>
-
-    <label for="reviewRating">Your Rating</label>
-    <select id="reviewRating" required>
-      <option value="5">★★★★★ - Excellent</option>
-      <option value="4">★★★★ - Very Good</option>
-      <option value="3">★★★ - Good</option>
-      <option value="2">★★ - Average</option>
-      <option value="1">★ - Poor</option>
-    </select>
-
-    <textarea id="reviewMessage" placeholder="Write your experience..." required></textarea>
-
-    <button type="submit">Submit Review</button>
-    <p id="reviewNotice">Your review will be published after admin approval.</p>
-  </form>
-
-  <div id="approvedReviews"></div>
 </section>
 </body>
 </html>
