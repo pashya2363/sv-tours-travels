@@ -691,7 +691,69 @@ const supabaseClient = window.supabase.createClient(
   SUPABASE_KEY
 );
 </script>
+<script>
+document.getElementById("reviewForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
 
+  const name = document.getElementById("reviewName").value.trim();
+  const rating = Number(document.getElementById("reviewRating").value);
+  const review = document.getElementById("reviewMessage").value.trim();
+  const notice = document.getElementById("reviewNotice");
+
+  notice.textContent = "Submitting...";
+
+  const { error } = await supabaseClient
+    .from("reviews")
+    .insert([{
+      customer_name: name,
+      rating: rating,
+      review: review,
+      approved: false
+    }]);
+
+  if (error) {
+    notice.textContent = "Something went wrong. Please try again.";
+    console.error(error);
+    return;
+  }
+
+  notice.textContent = "Thank you! Your review is submitted for approval.";
+  document.getElementById("reviewForm").reset();
+});
+
+async function loadApprovedReviews() {
+  const container = document.getElementById("approvedReviews");
+
+  const { data, error } = await supabaseClient
+    .from("reviews")
+    .select("customer_name, rating, review, created_at")
+    .eq("approved", true)
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  container.innerHTML = "";
+
+  data.forEach(item => {
+    const card = document.createElement("div");
+    const title = document.createElement("h3");
+    const stars = document.createElement("p");
+    const message = document.createElement("p");
+
+    title.textContent = item.customer_name;
+    stars.textContent = "★".repeat(item.rating);
+    message.textContent = item.review;
+
+    card.append(title, stars, message);
+    container.appendChild(card);
+  });
+}
+
+loadApprovedReviews();
+</script>
 </section>
 </body>
 </html>
